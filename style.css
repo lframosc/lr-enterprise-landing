@@ -1,0 +1,236 @@
+/* ===========================
+   ESTILOS GLOBALES
+=========================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+  background: white;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #0a8a3a;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.value-points {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.value-points li {
+  margin: 8px 0;
+  padding-left: 15px;
+  border-left: 3px solid #0a8a3a;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #0a8a3a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #06692c;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===========================
+   SOBRE LUIS RAMOS
+=========================== */
+
+.about {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.about h2 {
+  color: #0a8a3a;
+  margin-bottom: 15px;
+}
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.about-points li {
+  margin: 8px 0;
+  padding-left: 15px;
+  border-left: 3px solid #0a8a3a;
+}
+
+/* ===========================
+   SERVICIOS
+=========================== */
+
+.services {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.services h2 {
+  color: #0a8a3a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+.service-item h3 {
+  color: #0a8a3a;
+  margin-bottom: 5px;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 5px;
+  background: #0a8a3a;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ===========================
+   FORMULARIO DE CONTACTO
+=========================== */
+
+.contact {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact h2 {
+  color: #0a8a3a;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-color: #0a8a3a;
+  outline: none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+  text-align: center;
+  background: #0a8a3a;
+  color: white;
+  padding: 25px 10px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/* Redes sociales */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social {
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.facebook { background: #1877F2; }
+.instagram { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); }
+.whatsapp { background: #25D366; }
+
+.social:hover {
+  opacity: 0.8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.2rem; }
+  section { padding: 30px 15px; }
+}
+
