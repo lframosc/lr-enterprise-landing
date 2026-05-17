@@ -1,236 +1,191 @@
 /* ===========================
-   ESTILOS GLOBALES
-=========================== */
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #333;
-}
-
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 40px;
+   PALETA LR ENTERPRISE
+   =========================== */
+:root {
+  --verde: #1FAF5A;
+  --verde-oscuro: #0D6A36;
+  --blanco: #FFFFFF;
+  --gris: #F2F2F2;
+  --negro: #222222;
 }
 
 /* ===========================
-   HERO
-=========================== */
-
-.hero {
-  background: white;
-  padding: 60px 40px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  color: #0a8a3a;
-  margin-bottom: 10px;
-}
-
-.hero h2 {
-  font-size: 1.3rem;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.value-points {
-  list-style: none;
+   TIPOGRAFÍA Y BASE
+   =========================== */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.6;
+  margin: 0;
   padding: 0;
-  margin: 20px 0;
 }
 
-.value-points li {
-  margin: 8px 0;
-  padding-left: 15px;
-  border-left: 3px solid #0a8a3a;
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--negro);
+  margin-top: 0;
 }
 
-.cta-btn {
-  display: inline-block;
-  background: #0a8a3a;
-  color: white;
-  padding: 12px 25px;
+/* ===========================
+   SECCIONES
+   =========================== */
+section {
+  padding: 100px 20px;
+}
+
+/* ===========================
+   BOTONES
+   =========================== */
+.btn-primary {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 14px 28px;
   border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.cta-btn:hover {
-  background: #06692c;
+.btn-primary:hover {
+  background-color: var(--verde-oscuro);
 }
 
-.note {
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
+.btn-secondary {
+  background-color: var(--blanco);
+  color: var(--verde);
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 2px solid var(--verde);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* ===========================
-   SOBRE LUIS RAMOS
-=========================== */
-
-.about {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.about h2 {
-  color: #0a8a3a;
-  margin-bottom: 15px;
-}
-
-.about-points {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.about-points li {
-  margin: 8px 0;
-  padding-left: 15px;
-  border-left: 3px solid #0a8a3a;
+.btn-secondary:hover {
+  background-color: var(--gris);
 }
 
 /* ===========================
-   SERVICIOS
-=========================== */
-
-.services {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.services h2 {
-  color: #0a8a3a;
+   INPUT DE ARCHIVOS
+   =========================== */
+.file-label {
+  display: block;
+  background: var(--gris);
+  padding: 14px;
+  border-radius: 6px;
+  border: 2px dashed var(--verde);
+  color: var(--negro);
+  font-weight: 600;
+  cursor: pointer;
   margin-bottom: 20px;
   text-align: center;
 }
 
+.file-label input {
+  display: none;
+}
+
+.file-label:hover {
+  background: #e8e8e8;
+}
+
+/* ===========================
+   ANIMACIONES SUAVES
+   =========================== */
+
+/* Fade-in general */
+section, .service-item, #hero h1, #hero p, footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Delay para cada sección */
+#about { animation-delay: 0.2s; }
+#services { animation-delay: 0.4s; }
+#testimonials { animation-delay: 0.6s; }
+#contact { animation-delay: 0.8s; }
+footer { animation-delay: 1s; }
+
+/* Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover suave en servicios */
 .service-item {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-}
-
-.service-item:last-child {
-  border-bottom: none;
-}
-
-.service-item h3 {
-  color: #0a8a3a;
-  margin-bottom: 5px;
-}
-
-.price {
-  display: inline-block;
-  margin-top: 5px;
-  background: #0a8a3a;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* ===========================
-   FORMULARIO DE CONTACTO
-=========================== */
-
-.contact {
-  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
   border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background: var(--gris);
+  margin-bottom: 20px;
 }
 
-.contact h2 {
-  color: #0a8a3a;
-  margin-bottom: 10px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-label {
-  font-weight: bold;
-  color: #333;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  border-color: #0a8a3a;
-  outline: none;
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
 /* ===========================
-   FOOTER
-=========================== */
+   RESPONSIVE - MOVILES
+   =========================== */
+@media (max-width: 768px) {
 
-.footer {
-  text-align: center;
-  background: #0a8a3a;
-  color: white;
-  padding: 25px 10px;
-  margin-top: 40px;
+  section {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  #hero p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .service-item {
+    margin-bottom: 40px;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
-
-.footer p {
-  margin: 5px 0;
-}
-
-/* Redes sociales */
-.social-icons {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.social {
-  padding: 8px 14px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.facebook { background: #1877F2; }
-.instagram { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); }
-.whatsapp { background: #25D366; }
-
-.social:hover {
-  opacity: 0.8;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 600px) {
-  h1 { font-size: 1.7rem; }
-  h2 { font-size: 1.2rem; }
-  section { padding: 30px 15px; }
-}
-
