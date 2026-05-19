@@ -1,331 +1,100 @@
-/* ===========================
-   PALETA LR ENTERPRISE
-   =========================== */
-:root {
-  --verde: #1FAF5A;
-  --verde-oscuro: #008C3A;
-  --blanco: #FFFFFF;
-  --gris: #F2F2F2;
-  --negro: #222222;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR Enterprise – Servicios Profesionales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* ===========================
-   TIPOGRAFÍA Y BASE
-   =========================== */
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--negro);
-  background-color: var(--blanco);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
+<body>
 
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--negro);
-  margin-top: 0;
-}
+    <!-- Encabezado -->
+    <header class="header reveal">
+        <h1>LR Enterprise</h1>
+        <p>Servicios profesionales de redacción, traducción y asesoría documental</p>
+    </header>
 
-h1 { font-size: 42px; font-weight: 700; }
-h2 { font-size: 30px; font-weight: 600; }
-p, li, label, input, textarea { font-size: 17px; }
+    <!-- Sección principal -->
+    <section class="hero reveal">
+        <h2>Soluciones rápidas, claras y profesionales</h2>
+        <p>Documentos listos el mismo día. Atención personalizada. Precios accesibles.</p>
+        <a class="cta-button" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
+    </section>
 
-/* Scroll suave */
-html { scroll-behavior: smooth; }
+    <!-- Servicios con precios -->
+    <section id="services" class="services-section reveal">
+        <h2>Servicios</h2>
 
-/* Imágenes responsive */
-img { max-width: 100%; height: auto; border-radius: 8px; }
+        <div class="service-item reveal">
+            <h3>Redacción profesional</h3>
+            <p>Cartas formales para bancos, caseros, empleadores, reclamos y aclaraciones.</p>
+            <span class="price">$35</span>
+        </div>
 
-/* ===========================
-   CONTENEDORES Y GRID
-   =========================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+        <div class="service-item reveal">
+            <h3>Traducciones certificadas</h3>
+            <p>Documentos personales, bancarios, laborales y legales.</p>
+            <span class="price">$45</span>
+        </div>
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  align-items: center;
-}
+        <div class="service-item reveal">
+            <h3>Asesoría de documentos</h3>
+            <p>Revisión y corrección de documentos importantes.</p>
+            <span class="price">$25</span>
+        </div>
+    </section>
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
+    <!-- Formulario -->
+    <section class="form-section reveal">
+        <h2>Enviar documentos</h2>
+        <p>Adjunta tus archivos y describe lo que necesitas. Te responderé lo antes posible.</p>
 
-/* ===========================
-   NAVBAR
-   =========================== */
-nav {
-  width: 100%;
-  padding: 20px 0;
-  background: var(--blanco);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
-}
+        <form action="#" method="POST" enctype="multipart/form-data" class="contact-form">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required>
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-}
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
 
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--verde);
-}
+            <label for="message">Descripción del servicio</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
+            <label for="file">Subir documentos</label>
+            <input type="file" id="file" name="file" multiple>
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--negro);
-  font-weight: 600;
-  transition: 0.3s;
-}
+            <button type="submit" class="submit-button">Enviar solicitud</button>
+        </form>
+    </section>
 
-.nav-links a:hover {
-  color: var(--verde);
-}
+    <!-- Redes sociales -->
+    <footer class="footer reveal">
+        <p>Síguenos en redes</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://wa.me/14633153636" target="_blank">WhatsApp</a>
+        </div>
+        <p class="copy">© 2026 LR Enterprise. Todos los derechos reservados.</p>
+    </footer>
 
-/* ===========================
-   HERO
-   =========================== */
-#hero {
-  padding: 140px 20px;
-  background: var(--gris);
-}
+    <!-- SCROLL REVEAL -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".reveal");
 
-#hero h1 {
-  font-size: 48px;
-  color: var(--verde-oscuro);
-}
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
 
-#hero p {
-  font-size: 20px;
-  margin-bottom: 25px;
-}
+        elements.forEach(el => observer.observe(el));
+    });
+    </script>
 
-/* ===========================
-   BOTONES
-   =========================== */
-.btn-primary {
-  background-color: var(--verde);
-  color: var(--blanco);
-  padding: 14px 28px;
-  border-radius: 6px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-primary:hover { background-color: var(--verde-oscuro); }
-
-.btn-secondary {
-  background-color: var(--blanco);
-  color: var(--verde);
-  padding: 14px 28px;
-  border-radius: 6px;
-  border: 2px solid var(--verde);
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-secondary:hover { background-color: var(--gris); }
-
-/* ===========================
-   ABOUT
-   =========================== */
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-text h2 {
-  color: var(--verde-oscuro);
-}
-
-/* ===========================
-   SERVICIOS
-   =========================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.service-item {
-  background: var(--gris);
-  padding: 25px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.service-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-/* ===========================
-   FORMULARIO
-   =========================== */
-.form-container {
-  background: var(--gris);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-textarea { height: 140px; resize: none; }
-
-/* File upload */
-.file-label {
-  display: block;
-  background: var(--gris);
-  padding: 14px;
-  border-radius: 6px;
-  border: 2px dashed var(--verde);
-  color: var(--negro);
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.file-label input { display: none; }
-.file-label:hover { background: #e8e8e8; }
-
-/* ===========================
-   BLOQUES NUEVOS PARA CONTACTO
-   =========================== */
-.contact-number {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--verde-oscuro);
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.contact-block {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--negro);
-}
-
-footer .contact-block {
-  color: var(--blanco);
-}
-
-.contact-icon {
-  margin-right: 6px;
-  color: var(--verde);
-  font-size: 20px;
-  vertical-align: middle;
-}
-
-/* ===========================
-   REDES SOCIALES
-   =========================== */
-.social-links {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.social-links a {
-  padding: 8px 14px;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.social-links .google { background: #DB4437; }
-.social-links .facebook { background: #1877F2; }
-.social-links .instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-.social-links .whatsapp { background: #25D366; }
-
-.social-links a:hover { opacity: 0.85; }
-
-/* ===========================
-   FOOTER
-   =========================== */
-footer {
-  background: var(--negro);
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.footer-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.footer-links a:hover { color: var(--verde); }
-
-/* ===========================
-   RESPONSIVE
-   =========================== */
-@media (max-width: 768px) {
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  nav .nav-links { display: none; }
-
-  #hero h1 { font-size: 34px; }
-  #hero p { font-size: 18px; }
-
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-
-  .form-container {
-    padding: 25px;
-  }
-
-  button { width: 100%; }
-}
+</body>
+</html>
 

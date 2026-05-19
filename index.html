@@ -1,181 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LR Enterprise – Servicios Profesionales</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR Enterprise – Servicios Profesionales</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ===========================
-       NAVBAR
-       =========================== -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo">LR Enterprise</div>
-      <div class="nav-links">
-        <a href="#hero">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Encabezado -->
+    <header class="header reveal">
+        <h1>LR Enterprise</h1>
+        <p>Servicios profesionales de redacción, traducción y asesoría documental</p>
+    </header>
 
-  <!-- ===========================
-       HERO
-       =========================== -->
-  <section id="hero">
-    <div class="container grid-2">
-      <div>
-        <h1>Servicios Profesionales para la Comunidad</h1>
-        <p>Documentos, formularios, traducciones, impresiones, cartas, disputas y más. Atención rápida, confiable y en tu idioma.</p>
+    <!-- Sección principal -->
+    <section class="hero reveal">
+        <h2>Soluciones rápidas, claras y profesionales</h2>
+        <p>Documentos listos el mismo día. Atención personalizada. Precios accesibles.</p>
+        <a class="cta-button" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
+    </section>
 
-        <div class="contact-block">
-          Call/Text:
-          <span class="contact-number">(463) 315-3636</span>
+    <!-- Servicios con precios -->
+    <section id="services" class="services-section reveal">
+        <h2>Servicios</h2>
+
+        <div class="service-item reveal">
+            <h3>Redacción profesional</h3>
+            <p>Cartas formales para bancos, caseros, empleadores, reclamos y aclaraciones.</p>
+            <span class="price">$35</span>
         </div>
 
-        <br>
-        <a href="#contact" class="btn-primary">Contáctame</a>
-      </div>
-
-      <div>
-        <img src="https://via.placeholder.com/500x350" alt="Servicios LR Enterprise">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===========================
-       ABOUT
-       =========================== -->
-  <section id="about">
-    <div class="container about-container">
-      <div class="about-text">
-        <h2>Sobre mí</h2>
-        <p>Soy Luis Ramos, y mi misión es ayudarte con tus documentos, formularios y trámites de manera clara, rápida y profesional.</p>
-        <p>Atiendo a toda la comunidad latina con servicios accesibles, confiables y siempre con trato humano.</p>
-      </div>
-
-      <div>
-        <img src="https://via.placeholder.com/450x350" alt="Luis Ramos">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===========================
-       SERVICIOS
-       =========================== -->
-  <section id="services">
-    <div class="container">
-      <h2>Servicios</h2>
-
-      <div class="services-grid">
-
-        <div class="service-item">
-          <h3>Documentos y Formularios</h3>
-          <p>Llenado profesional de formularios, cartas, aplicaciones y documentos oficiales.</p>
+        <div class="service-item reveal">
+            <h3>Traducciones certificadas</h3>
+            <p>Documentos personales, bancarios, laborales y legales.</p>
+            <span class="price">$45</span>
         </div>
 
-        <div class="service-item">
-          <h3>Traducciones Simples</h3>
-          <p>Traducciones de documentos personales, cartas y formularios.</p>
+        <div class="service-item reveal">
+            <h3>Asesoría de documentos</h3>
+            <p>Revisión y corrección de documentos importantes.</p>
+            <span class="price">$25</span>
         </div>
+    </section>
 
-        <div class="service-item">
-          <h3>Impresiones y Escaneos</h3>
-          <p>Impresión, escaneo y preparación de documentos para envío.</p>
-        </div>
+    <!-- Formulario -->
+    <section class="form-section reveal">
+        <h2>Enviar documentos</h2>
+        <p>Adjunta tus archivos y describe lo que necesitas. Te responderé lo antes posible.</p>
 
-        <div class="service-item">
-          <h3>Disputas de Crédito</h3>
-          <p>Asistencia en cartas de disputa, organización de documentos y seguimiento.</p>
-        </div>
+        <form action="#" method="POST" enctype="multipart/form-data" class="contact-form">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required>
 
-        <div class="service-item">
-          <h3>Consultas Personalizadas</h3>
-          <p>Orientación para trámites, procesos y documentos específicos.</p>
-        </div>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
 
-      </div>
-    </div>
-  </section>
+            <label for="message">Descripción del servicio</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-  <!-- ===========================
-       FORMULARIO DE CONTACTO
-       =========================== -->
-  <section id="contact">
-    <div class="container">
-      <h2>Envíame tu consulta</h2>
+            <label for="file">Subir documentos</label>
+            <input type="file" id="file" name="file" multiple>
 
-      <div class="form-container">
-
-        <div class="contact-block">
-          Call/Text:
-          <span class="contact-number">(463) 315-3636</span>
-          · Email:
-          <strong>lframosc@gmail.com</strong>
-        </div>
-
-        <br>
-
-        <form action="#" method="POST" enctype="multipart/form-data">
-
-          <div class="form-group">
-            <label>Nombre completo</label>
-            <input type="text" required>
-          </div>
-
-          <div class="form-group">
-            <label>Correo electrónico</label>
-            <input type="email" required>
-          </div>
-
-          <div class="form-group">
-            <label>Mensaje</label>
-            <textarea required></textarea>
-          </div>
-
-          <label class="file-label">
-            Subir documentos (opcional)
-            <input type="file" name="files">
-          </label>
-
-          <button type="submit" class="btn-primary">Enviar</button>
-
+            <button type="submit" class="submit-button">Enviar solicitud</button>
         </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===========================
-       FOOTER
-       =========================== -->
-  <footer>
-    <div class="container">
+    <!-- Redes sociales -->
+    <footer class="footer reveal">
+        <p>Síguenos en redes</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://wa.me/14633153636" target="_blank">WhatsApp</a>
+        </div>
+        <p class="copy">© 2026 LR Enterprise. Todos los derechos reservados.</p>
+    </footer>
 
-      <h3>LR Enterprise</h3>
+    <!-- SCROLL REVEAL -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".reveal");
 
-      <div class="contact-block">
-        Call/Text:
-        <span class="contact-number">(463) 315-3636</span>
-        · Email:
-        <strong>lframosc@gmail.com</strong>
-      </div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
 
-      <div class="footer-links">
-        <a href="#hero">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
-      </div>
-
-      <p style="margin-top:20px;">© 2026 LR Enterprise – Todos los derechos reservados</p>
-
-    </div>
-  </footer>
+        elements.forEach(el => observer.observe(el));
+    });
+    </script>
 
 </body>
 </html>
