@@ -1,100 +1,89 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LR Enterprise – Servicios Profesionales</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<body>
+/* BODY */
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <!-- Encabezado -->
-    <header class="header reveal">
-        <h1>LR Enterprise</h1>
-        <p>Servicios profesionales de redacción, traducción y asesoría documental</p>
-    </header>
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0a3d62;
+    color: white;
+}
 
-    <!-- Sección principal -->
-    <section class="hero reveal">
-        <h2>Soluciones rápidas, claras y profesionales</h2>
-        <p>Documentos listos el mismo día. Atención personalizada. Precios accesibles.</p>
-        <a class="cta-button" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
-    </section>
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
 
-    <!-- Servicios con precios -->
-    <section id="services" class="services-section reveal">
-        <h2>Servicios</h2>
+/* BUTTON */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0a3d62;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+}
 
-        <div class="service-item reveal">
-            <h3>Redacción profesional</h3>
-            <p>Cartas formales para bancos, caseros, empleadores, reclamos y aclaraciones.</p>
-            <span class="price">$35</span>
-        </div>
+/* SERVICES */
+.services-section {
+    padding: 40px 20px;
+}
 
-        <div class="service-item reveal">
-            <h3>Traducciones certificadas</h3>
-            <p>Documentos personales, bancarios, laborales y legales.</p>
-            <span class="price">$45</span>
-        </div>
+.service-item {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-        <div class="service-item reveal">
-            <h3>Asesoría de documentos</h3>
-            <p>Revisión y corrección de documentos importantes.</p>
-            <span class="price">$25</span>
-        </div>
-    </section>
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a3d62;
+}
 
-    <!-- Formulario -->
-    <section class="form-section reveal">
-        <h2>Enviar documentos</h2>
-        <p>Adjunta tus archivos y describe lo que necesitas. Te responderé lo antes posible.</p>
+/* FORM */
+.form-section {
+    padding: 40px 20px;
+}
 
-        <form action="#" method="POST" enctype="multipart/form-data" class="contact-form">
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" required>
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
 
-            <label for="message">Descripción del servicio</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a3d62;
+    color: white;
+    margin-top: 40px;
+}
 
-            <label for="file">Subir documentos</label>
-            <input type="file" id="file" name="file" multiple>
-
-            <button type="submit" class="submit-button">Enviar solicitud</button>
-        </form>
-    </section>
-
-    <!-- Redes sociales -->
-    <footer class="footer reveal">
-        <p>Síguenos en redes</p>
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://wa.me/14633153636" target="_blank">WhatsApp</a>
-        </div>
-        <p class="copy">© 2026 LR Enterprise. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- SCROLL REVEAL -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(".reveal");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
-
-        elements.forEach(el => observer.observe(el));
-    });
-    </script>
-
-</body>
-</html>
+/* update */
 
