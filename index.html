@@ -60,14 +60,24 @@
     <!-- FORMULARIO -->
     <section class="form-section reveal">
         <h2>Contáctame</h2>
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
-            <label>Adjuntar archivo:</label>
-            <input type="file" name="archivo">
-            <button type="submit">Enviar</button>
-        </form>
+        <form action="https://formsubmit.co/lframosc@gmail.com" method="POST" enctype="multipart/form-data">
+
+    <!-- Campos visibles -->
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+    <label>Adjuntar archivo:</label>
+    <input type="file" name="attachment" multiple>
+
+    <button type="submit">Enviar</button>
+
+    <!-- Configuraciones ocultas -->
+    <input type="hidden" name="_next" value="https://lr-enterprise-landing-2.onrender.com/gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo cliente LR Enterprise">
+</form>
+
     </section>
 
     <!-- FOOTER -->
