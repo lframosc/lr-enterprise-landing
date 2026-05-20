@@ -3,97 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LR Enterprise – Servicios Profesionales</title>
+    <title>LR Enterprise - Tax Resolution & IRS Representation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Encabezado -->
-    <header class="header reveal">
+    <!-- HEADER -->
+    <header>
         <h1>LR Enterprise</h1>
-        <p>Redacción, traducción y asesoría documental con calidad profesional</p>
+        <p>Resolviendo asuntos del IRS con precisión</p>
+        <a class="btn-wsp" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
     </header>
 
-    <!-- Sección principal -->
-    <section class="hero reveal">
-        <h2>Soluciones rápidas, claras y confiables</h2>
-        <p>Documentos listos el mismo día. Atención personalizada. Precios accesibles.</p>
-        <a class="cta-button" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
-    </section>
-
-    <!-- Servicios con precios -->
-    <section id="services" class="services-section reveal">
+    <!-- SERVICIOS -->
+    <section class="servicios">
         <h2>Servicios</h2>
 
-        <div class="service-item reveal">
-            <h3>Redacción profesional</h3>
-            <p>Cartas formales para bancos, caseros, empleadores, reclamos y aclaraciones.</p>
-            <span class="price">$35</span>
+        <div class="servicio-card">
+            <h3>Tax Resolution</h3>
+            <p>Soluciones profesionales para deudas y problemas con el IRS.</p>
+            <span class="precio">$350</span>
         </div>
 
-        <div class="service-item reveal">
-            <h3>Traducciones certificadas</h3>
-            <p>Documentos personales, bancarios, laborales y legales.</p>
-            <span class="price">$45</span>
+        <div class="servicio-card">
+            <h3>IRS Representation</h3>
+            <p>Representación experta ante el IRS para proteger tus derechos.</p>
+            <span class="precio">$450</span>
         </div>
 
-        <div class="service-item reveal">
-            <h3>Asesoría de documentos</h3>
-            <p>Revisión, corrección y mejora de documentos importantes.</p>
-            <span class="price">$25</span>
+        <div class="servicio-card">
+            <h3>ITIN Processing</h3>
+            <p>Tramitación rápida y segura de tu número ITIN.</p>
+            <span class="precio">$120</span>
         </div>
     </section>
 
-    <!-- Formulario -->
-    <section class="form-section reveal">
-        <h2>Enviar documentos</h2>
-        <p>Adjunta tus archivos y describe lo que necesitas. Te responderé lo antes posible.</p>
+    <!-- FORMULARIO -->
+    <section class="formulario">
+        <h2>Contáctame</h2>
 
-        <form action="#" method="POST" enctype="multipart/form-data" class="contact-form">
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" required>
+        <form action="https://formsubmit.co/lframosc@gmail.com" method="POST" enctype="multipart/form-data">
 
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo cliente LR Enterprise">
+            <input type="hidden" name="_next" value="https://lr-enterprise-landing-2.onrender.com">
 
-            <label for="message">Descripción del servicio</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" required>
 
-            <label for="file">Subir documentos</label>
-            <input type="file" id="file" name="file" multiple>
+            <label>Email</label>
+            <input type="email" name="email" required>
 
-            <button type="submit" class="cta-button">Enviar solicitud</button>
+            <label>Teléfono</label>
+            <input type="text" name="telefono" required>
+
+            <label>Mensaje</label>
+            <textarea name="mensaje" required></textarea>
+
+            <label>Adjuntar documento</label>
+            <input type="file" name="attachment">
+
+            <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <!-- Redes sociales -->
-    <footer class="footer reveal">
-        <p>Síguenos en redes</p>
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://wa.me/14633153636" target="_blank">WhatsApp</a>
+    <!-- CONTACTO + REDES -->
+    <section class="contacto">
+        <h2>Información de Contacto</h2>
+
+        <p><strong>📞 Teléfono:</strong> (463) 315-3636</p>
+        <p><strong>📧 Email:</strong> lframosc@gmail.com</p>
+
+        <div class="social-icons">
+            <a href="https://wa.me/14633153636" target="_blank">
+                <img src="img/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
         </div>
-        <p class="copy">© 2026 LR Enterprise. Todos los derechos reservados.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 LR Enterprise — Tax Resolution & IRS Representation</p>
     </footer>
-
-    <!-- SCROLL REVEAL -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(".reveal");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
-
-        elements.forEach(el => observer.observe(el));
-    });
-    </script>
 
 </body>
 </html>
