@@ -3,96 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LR Enterprise - Tax Resolution & IRS Representation</title>
+    <title>LR Enterprise - Servicios Profesionales</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header class="header reveal">
         <h1>LR Enterprise</h1>
-        <p>Resolviendo asuntos del IRS con precisión</p>
-        <a class="btn-wsp" href="https://wa.me/14633153636" target="_blank">Escríbeme por WhatsApp</a>
+        <p>Servicios profesionales para tus documentos</p>
+        <a href="https://wa.me/14633153636" class="btn-wsp">WhatsApp</a>
     </header>
 
+    <!-- HERO -->
+    <section class="hero reveal">
+        <h2>Soluciones rápidas, confiables y profesionales</h2>
+        <p>Redacción, traducciones, formularios, impresiones y más.</p>
+    </section>
+
     <!-- SERVICIOS -->
-    <section class="servicios">
+    <section class="servicios reveal">
         <h2>Servicios</h2>
 
         <div class="servicio-card">
-            <h3>Tax Resolution</h3>
-            <p>Soluciones profesionales para deudas y problemas con el IRS.</p>
-            <span class="precio">$350</span>
+            <h3>Redacción Profesional</h3>
+            <p>Cartas formales para bancos, caseros, empleadores, reclamos y aclaraciones.</p>
+            <span class="precio">$35</span>
         </div>
 
         <div class="servicio-card">
-            <h3>IRS Representation</h3>
-            <p>Representación experta ante el IRS para proteger tus derechos.</p>
-            <span class="precio">$450</span>
+            <h3>Traducciones Simples</h3>
+            <p>Documentos personales, bancarios, laborales y escolares.</p>
+            <span class="precio">$45</span>
         </div>
 
         <div class="servicio-card">
-            <h3>ITIN Processing</h3>
-            <p>Tramitación rápida y segura de tu número ITIN.</p>
-            <span class="precio">$120</span>
+            <h3>Asesoría de Documentos</h3>
+            <p>Revisión, corrección y organización de documentos importantes.</p>
+            <span class="precio">$25</span>
+        </div>
+
+        <div class="servicio-card">
+            <h3>Impresión y Escaneo</h3>
+            <p>Impresión de documentos, escaneo en PDF y envío digital.</p>
+            <span class="precio">$10</span>
+        </div>
+
+        <div class="servicio-card">
+            <h3>Llenado de Formularios</h3>
+            <p>Asistencia para completar formularios personales, laborales y escolares.</p>
+            <span class="precio">$30</span>
         </div>
     </section>
 
     <!-- FORMULARIO -->
-    <section class="formulario">
+    <section class="form-section reveal">
         <h2>Contáctame</h2>
-
-        <form action="https://formsubmit.co/lframosc@gmail.com" method="POST" enctype="multipart/form-data">
-
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuevo cliente LR Enterprise">
-            <input type="hidden" name="_next" value="https://lr-enterprise-landing-2.onrender.com">
-
-            <label>Nombre completo</label>
-            <input type="text" name="nombre" required>
-
-            <label>Email</label>
-            <input type="email" name="email" required>
-
-            <label>Teléfono</label>
-            <input type="text" name="telefono" required>
-
-            <label>Mensaje</label>
-            <textarea name="mensaje" required></textarea>
-
-            <label>Adjuntar documento</label>
-            <input type="file" name="attachment">
-
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+            <label>Adjuntar archivo:</label>
+            <input type="file" name="archivo">
             <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <!-- CONTACTO + REDES -->
-    <section class="contacto">
-        <h2>Información de Contacto</h2>
-
-        <p><strong>📞 Teléfono:</strong> (463) 315-3636</p>
-        <p><strong>📧 Email:</strong> lframosc@gmail.com</p>
-
-        <div class="social-icons">
-            <a href="https://wa.me/14633153636" target="_blank">
-                <img src="img/whatsapp.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="img/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="img/instagram.png" alt="Instagram">
-            </a>
-        </div>
-    </section>
-
     <!-- FOOTER -->
-    <footer>
-        <p>© 2026 LR Enterprise — Tax Resolution & IRS Representation</p>
+    <footer class="footer reveal">
+        <p>© 2026 LR Enterprise — Servicios Profesionales</p>
+        <p>Tel: (463) 315-3636 · Email: lframosc@gmail.com</p>
+
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
     </footer>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
 
 </body>
 </html>
-
+    
